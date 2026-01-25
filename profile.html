@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Profile | Toolverse</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f6f8;
+      padding: 40px;
+    }
+    .card {
+      background: white;
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    img {
+      width: 90px;
+      border-radius: 50%;
+    }
+    input {
+      width: 90%;
+      padding: 8px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #3b82f6;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <img id="imgPreview" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+    <input type="text" id="name" placeholder="Enter your name">
+    <input type="text" id="imgUrl" placeholder="Profile image URL">
+    <button onclick="save()">Save Profile</button>
+  </div>
+
+  <script>
+    function save() {
+      localStorage.setItem("username", document.getElementById("name").value);
+      localStorage.setItem("profileImage", document.getElementById("imgUrl").value);
+      alert("Profile saved!");
+    }
+  </script>
+</body>
+</html>
